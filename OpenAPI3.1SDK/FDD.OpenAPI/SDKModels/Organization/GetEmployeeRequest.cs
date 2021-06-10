@@ -11,7 +11,7 @@ namespace FDD.OpenAPI.SDKModels.Organization
     /// 组织架构-员工列表查询
     /// </summary>
     [RemoteService("/org/group/getEmployee", "POST")]
-    public class GetEmployeeRequest : BaseReqeust<GetEmployeeResponse>
+    public class GetEmployeeRequest : BaseReqeust<List<GetEmployeeResponse>>
     {
         public string company { get; set; }
         public string offset { get; set; }

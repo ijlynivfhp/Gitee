@@ -11,7 +11,7 @@ namespace FDD.OpenAPI.SDKModels.Organization
     /// 组织架构-公司列表查询
     /// </summary>
     [RemoteService("/org/group/getChildCompanyList", "POST")]
-    public class GetChildCompanyListRequest : BaseReqeust<GetChildCompanyListResponse>
+    public class GetChildCompanyListRequest : BaseReqeust<List<GetChildCompanyListResponse>>
     {
         public string company { get; set; }
     }

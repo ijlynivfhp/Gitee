@@ -13,7 +13,7 @@ namespace FDD.OpenAPI.SDKModels.Seal
         public string status { get; set; }
         public string sysFlag { get; set; }
         public string base64 { get; set; }
-        public SealHolders sealHolders { get; set; }
+        public List<SealHolders> sealHolders { get; set; }
         public class SealHolders
         {
             public string unionId { get; set; }

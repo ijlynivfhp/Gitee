@@ -17,7 +17,7 @@ namespace FDD.OpenAPI.SDKModels.Seal
         public Owner owner { get; set; }
         public class SealInfo
         {
-            public int sealId { get; set; }
+            public string sealId { get; set; }
         }
         public class Owner
         {

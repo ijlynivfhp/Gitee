@@ -10,7 +10,7 @@ namespace FDD.OpenAPI.SDKModels.Signtasks
     /// <summary>
     /// 基于原始文件创建签署任务
     /// </summary>
-    [RemoteService("/signtasks/createByFile", "POST")]
+    [RemoteService("/signtasks/createTaskByFile", "POST")]
     public class CreateTaskByFileRequest : BaseReqeust<CreateTaskByFileResponse>
     {
         public string taskSubject { get; set; }
