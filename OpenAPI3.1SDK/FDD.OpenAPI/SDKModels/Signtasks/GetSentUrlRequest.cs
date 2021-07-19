@@ -14,5 +14,6 @@ namespace FDD.OpenAPI.SDKModels.Signtasks
     public class GetSentUrlRequest : BaseReqeust<GetSentUrlResponse>
     {
         public string taskId { get; set; }
+        public string redirectUrl { get; set; }
     }
 }

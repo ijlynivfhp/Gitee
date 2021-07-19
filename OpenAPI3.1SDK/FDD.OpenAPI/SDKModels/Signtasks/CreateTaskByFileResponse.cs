@@ -13,6 +13,8 @@ namespace FDD.OpenAPI.SDKModels.Signtasks
         public class SignFileIds
         {
             public string signFileId { get; set; }
+            public string fileId { get; set; }
+            public string signFileName { get; set; }
         }
     }
 }

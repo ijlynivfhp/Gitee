@@ -27,8 +27,8 @@ namespace FDD.Test
         static void Main(string[] args)
         {
             var ServerUrl = "https://sandboxapi.fadada.com/api/v3";
-            var AppId = "FA67694018";
-            var AppKey = "UNPRNJ8M35RUBJCTVOTJSL2AXQRLGMZS";
+            var AppId = "FA82696764";
+            var AppKey = "7KRLD3FVC0FFDORNEMAJ5U7PHQIAQVSQ";
             //var client = new OpenClient(ServerUrl, AppId, AppKey);
             var client = new EcologicalClient(ServerUrl, AppId, AppKey);
 
