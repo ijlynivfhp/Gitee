@@ -35,6 +35,7 @@ namespace FDD.OpenAPI.SDKModels.Accounts
 
         public class Company
         {
+            public string companyAuthScheme { get; set; }
             public string legalName { get; set; }
             public string organizationType { get; set; }
             public string authorizationFileBase64 { get; set; }
