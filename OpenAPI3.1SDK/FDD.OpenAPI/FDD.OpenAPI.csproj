@@ -142,6 +142,8 @@
     <Compile Include="SDKModels\Signtasks\GetSentUrlResponse.cs" />
     <Compile Include="SDKModels\Signtasks\GetSignPreviewUrlRequest.cs" />
     <Compile Include="SDKModels\Signtasks\GetSignPreviewUrlResponse.cs" />
+    <Compile Include="SDKModels\Signtasks\GetSignTaskDownloadUrlsRequest.cs" />
+    <Compile Include="SDKModels\Signtasks\GetSignTaskDownloadUrlsResponse.cs" />
     <Compile Include="SDKModels\Signtasks\GetSignUrlRequest.cs" />
     <Compile Include="SDKModels\Signtasks\GetSignUrlResponse.cs" />
     <Compile Include="SDKModels\Signtasks\GetTaskDetailByTaskIdRequest.cs" />
