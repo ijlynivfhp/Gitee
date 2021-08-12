@@ -26,6 +26,7 @@ namespace FDD.OpenAPI.SDKModels.Signtasks
         {
             public Signer signer { get; set; }
             public ExternalSigner externalSigner { get; set; }
+            public Notice notice { get; set; }
             public int signOrder { get; set; }
             public int locks { get; set; }
             public List<SignRegions> signRegions { get; set; }
@@ -45,6 +46,7 @@ namespace FDD.OpenAPI.SDKModels.Signtasks
         }
         public class ExternalSigner
         {
+            public Notice notice { get; set; }
             public string mobile { get; set; }
             public string personName { get; set; }
             public ExternalCorp externalCorp { get; set; }
