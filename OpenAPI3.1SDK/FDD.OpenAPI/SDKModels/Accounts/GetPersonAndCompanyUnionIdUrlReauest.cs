@@ -23,6 +23,7 @@ namespace FDD.OpenAPI.SDKModels.Accounts
         public string authScope { get; set; }
         public Applicant applicant { get; set; }
         public Notice notice { get; set; }
+        public int reRealName { get; set; }
 
         public class Bank
         {
