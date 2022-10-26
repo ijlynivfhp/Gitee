@@ -32,6 +32,31 @@ namespace FDD.Test
             //var client = new OpenClient(ServerUrl, AppId, AppKey);
             var client = new EcologicalClient(ServerUrl, AppId, AppKey);
 
+            #region 3.1.43 组织架构-员工列表查询
+            var result43 = client.Execute(new GetEmployeeRequest()
+            {
+                company = "ba32282d94144951acd82d2f9696fb00"
+            });
+            Console.WriteLine(JsonConvert.SerializeObject(result43));
+            #endregion
+
+            #region 3.1.34 企业印章列表查询
+            var result34 = client.Execute(new CompanySealListRequest()
+            {
+                sealInfo = new CompanySealListRequest.SealInfo() { loadUnPass = 0 }
+            });
+            Console.WriteLine(JsonConvert.SerializeObject(result34));
+            #endregion
+
+            #region 3.1.36 企业印章授权
+            var result36 = client.Execute(new SealAuthRequest()
+            {
+                sealInfo=new SealAuthRequest.SealInfo() { sealId= "1629813130406166801" },
+                employeeInfo=new SealAuthRequest.EmployeeInfo() { unionId= "1f054b005f10477f9c0d6b55db10a0d1" }
+            });
+            Console.WriteLine(JsonConvert.SerializeObject(result36));
+            #endregion
+
             //#region 3.1.1 获取接入方实名绑定信息
             //var result1 = client.Execute(new GetAccessObjectInfoRequest()
             //{
@@ -341,12 +366,14 @@ namespace FDD.Test
             //Console.WriteLine(JsonConvert.SerializeObject(result38));
             //#endregion
 
-            //#region 3.1.39 组织架构-移除分子公司
-            //var result39 = client.Execute(new RemoveSubCompanyRequest()
-            //{
-            //});
-            //Console.WriteLine(JsonConvert.SerializeObject(result39));
-            //#endregion
+            #region 3.1.39 组织架构-移除分子公司
+            var result39 = client.Execute(new RemoveSubCompanyRequest()
+            {
+                parentCompany = "ba32282d94144951acd82d2f9696fb00",
+                subCompany = "ea6699e688794b3c8a75569b19e2eeee",
+            });
+            Console.WriteLine(JsonConvert.SerializeObject(result39));
+            #endregion
 
             //#region 3.1.40 组织架构-公司列表查询
             //var result40 = client.Execute(new GetChildCompanyListRequest()
@@ -362,19 +389,16 @@ namespace FDD.Test
             //Console.WriteLine(JsonConvert.SerializeObject(result41));
             //#endregion
 
-            //#region 3.1.42 组织架构-移除员工
-            //var result42 = client.Execute(new DelEmployeeRequest()
-            //{
-            //});
-            //Console.WriteLine(JsonConvert.SerializeObject(result42));
-            //#endregion
+            #region 3.1.42 组织架构-移除员工
+            var result42 = client.Execute(new DelEmployeeRequest()
+            {
+                company = "c1c039a3b5e54069b50bb6a329cf4611",
+                employeeInfo = new DelEmployeeRequest.EmployeeInfo() { unionId = "d44bd7c6173d41a4a2bbf8f4fb2c728d" }
+            });
+            Console.WriteLine(JsonConvert.SerializeObject(result42));
+            #endregion
 
-            //#region 3.1.43 组织架构-员工列表查询
-            //var result43 = client.Execute(new GetEmployeeRequest()
-            //{
-            //});
-            //Console.WriteLine(JsonConvert.SerializeObject(result43));
-            //#endregion
+
 
             //#region 3.1.44 组织架构-变更企业管理员
             //var result44 = client.Execute(new GetChangeCompanyMajorUrlRequest()

@@ -37,7 +37,7 @@ namespace FDD.OpenAPI
             var reqStr = JsonConvert.SerializeObject(req, new JsonSerializerSettings() { NullValueHandling = NullValueHandling.Ignore });
             var urlAttribute = GetUrlAttribute(req);
             var url = ServerUrl + urlAttribute.Url;
-            BaseResponse<T> rspModel = null;
+            var rspModel = req.GetResponse();
             try
             {
                 var body = new Dictionary<string, string>() { { "bizContent", reqStr } };
